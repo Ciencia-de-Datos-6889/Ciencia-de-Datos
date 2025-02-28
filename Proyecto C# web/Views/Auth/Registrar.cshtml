@@ -1,0 +1,48 @@
+@model insertarDatosApp.Models.RegistroViewModel
+
+@{
+    ViewData["Title"] = "Registrar";
+}
+
+<link rel="stylesheet" href="/css/login.css">
+
+<div class="center">
+    <div class="login-container">
+        <img src="/img/logo.png" style="height: 200px; width: 250px; transform: rotate(10deg); margin-top: -50px;" alt="">
+        <h2 style="margin-top: -50px;">Registro</h2>
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger">@ViewBag.Error</div>
+        }
+
+        <form asp-action="Registrar" method="post">
+            <div>
+                <label asp-for="NombreUsuario">Nombre de Usuario:</label>
+                <input placeholder="Nombre de Usuario" asp-for="NombreUsuario"  required />
+                <span asp-validation-for="NombreUsuario" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Contrasena">Contraseña:</label>
+                <input asp-for="Contrasena" type="password" required />
+                <span asp-validation-for="Contrasena" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Email">Email:</label>
+                <input asp-for="Email" type="email" required />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div>
+                <label asp-for="Telefono">Teléfono:</label>
+                <input asp-for="Telefono" required />
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <br>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

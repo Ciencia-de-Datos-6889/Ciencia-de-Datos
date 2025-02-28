@@ -1,0 +1,87 @@
+/* Estilo general para el contenedor del formulario de registro */
+.center {
+    margin-top: 200px;
+}
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.register-container h2 {
+    color: #333;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Mensaje de error */
+.register-container .alert {
+    padding: 1rem;
+    color: #fff;
+    background-color: #e63946;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Contenedores de los campos del formulario */
+.register-container form div {
+    margin-bottom: 1.5rem;
+}
+
+/* Etiquetas */
+.register-container label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Campos de entrada */
+.register-container input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.register-container input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Mensaje de validación */
+.register-container .text-danger {
+    color: #e63946;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+/* Botón de envío */
+.register-container button[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-container button[type="submit"]:hover {
+    background-color: #2563eb;
+}

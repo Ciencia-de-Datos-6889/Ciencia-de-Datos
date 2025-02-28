@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Effect</title>
+  <link rel="stylesheet" href="/css/parallax.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+
+
+
+  <!-- Módulo Parallax con <img> -->
+  <div class="parallax">
+    <img src="/img/fondo2.jpg" alt="Parallax Image"> <!-- Ruta de la imagen en el HTML -->
+    <div class="content">
+      <h1>Bienvenido</h1>
+      <p>PROMOCINOES TODO EL MES DE DICIEMBRE</p>
+    </div>
+  </div>
+
+  <script>
+    // Detecta el desplazamiento de la página
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.pageYOffset;
+      var parallaxImage = document.querySelector('.parallax img');
+      
+      // Mueve la imagen en función del scroll
+      parallaxImage.style.transform = 'translateY(' + (scrollPosition * 0.3) + 'px)';
+    });
+  </script>
+
+</body>
+</html>

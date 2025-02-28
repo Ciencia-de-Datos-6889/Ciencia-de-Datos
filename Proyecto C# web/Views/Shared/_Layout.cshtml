@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GameXpress</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/template.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+</head>
+
+<body>
+    <header>
+        <span class="user-options">
+            <a href="@Url.Action("Login", "Auth")">Ingresar</a> | <a href="@Url.Action("Registrar", "Auth")">Crear cuenta</a>
+        </span>
+
+        <div class="social-bar">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <nav class="navbar-container">
+            <div class="navbar">
+                <img src="/img/logo.png" style="height: 120px; width: 100px; margin-left: 110px; transform: rotate(13deg);" alt="GameXpress Logo" class="logo">
+
+                <div class="search-bar">
+                    <div class="dropdown" style="margin-right: 21px;">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorias
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><button class="dropdown-item category-btn" type="button">Motherboard</button></li>
+                            <li><button class="dropdown-item category-btn" type="button">Teclados</button></li>
+                            <li><button class="dropdown-item category-btn" type="button">Tarjetas Gráficas</button></li>
+                        </ul>
+                    </div>
+
+                    <input type="text" placeholder="Buscar...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="cart-info" style="margin-right: 110px;">
+                    <div class="flex" style="display: flex;">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>TU CESTA 0</span>
+                    </div>
+                    <span>COL $0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        // Selecciona todos los botones con la clase "category-btn"
+        const categoryButtons = document.querySelectorAll('.category-btn');
+
+        // Agrega un evento de clic a cada botón
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Debes iniciar sesión para acceder a esta categoría.');
+            });
+        });
+    </script>
+</body>
+
+
+
+
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+@* 
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Logo and Brand Name -->
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="/img/logo.png" alt="Logo" width="70" height="70" class="d-inline-block align-top">
+            </a>
+
+            <!-- Toggle Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Sobre Mi</a>
+                    </li>
+                    @* <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Contactos" asp-action="Crear">Crear Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Contactos" asp-action="Index">Ver Registros</a>
+                    </li> 
+
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorias
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button">Motherborad</button></li>
+                                <li><button class="dropdown-item" type="button">Teclados</button></li>
+                                <li><button class="dropdown-item" type="button">Tarjetas Graficas</button></li>
+                            </ul>
+                        </div>
+                </ul>
+
+                <!-- Search Bar -->
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+                </form>
+
+                <!-- Login and Register Buttons -->
+                <div>
+                   <a href="@Url.Action("Login", "Auth")" class="btn btn-warning">Login</a>
+
+                    <a href="@Url.Action("register", "Auth")" class="btn btn-warning">Registro</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header> *@
+
+<div class="container" style="flex: 1;">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<!-- Footer Section -->
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2024 - GameXpress - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

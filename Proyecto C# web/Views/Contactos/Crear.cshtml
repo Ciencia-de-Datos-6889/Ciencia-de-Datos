@@ -1,0 +1,22 @@
+@model Contacto
+
+<form asp-action="Crear" method="post">
+
+   <div>
+    <label >Nombre</label>
+        <input asp-for ="Nombre" required />
+    </div>
+
+    <div>
+        <label >Telefono</label>
+        <input asp-for ="Telefono"  required/>
+    </div>
+
+   <div>
+        <label >Gmail</label>
+        <input asp-for ="Gmail" required/>
+    </div>
+    <button type="submit" >Guardar</button>
+
+
+</form>

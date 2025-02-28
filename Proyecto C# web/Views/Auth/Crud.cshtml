@@ -1,0 +1,33 @@
+@model IEnumerable<Usuario>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Contraseña</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.NombreUsuario</td>
+                <td>@item.Contrasena</td>
+                <td>@item.Telefono</td>
+                <td>@item.Email</td>
+                <td>
+                    <a href="@Url.Action("Editar", "Auth", new { id = item.Id })" class="editar-usuario">Editar</a> |
+                    <form action="@Url.Action("Eliminar", "Auth")" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                        <input type="hidden" name="id" value="@item.Id" />
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Agregar", "Auth")" id="agregar-usuario">Agregar Usuario</a>

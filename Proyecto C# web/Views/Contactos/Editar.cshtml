@@ -1,0 +1,33 @@
+@model Contacto
+
+<h2>Editar Contacto</h2>
+
+<form asp-action="Editar" method="post" >
+  
+  <input type="hidden" asp-for="Id"/>
+
+    <div>
+        <label for="Nombre">Nombre</label>
+        <input  asp-for="Nombre" class="form-control"/>
+    </div>
+
+    <div>
+        <label for="Telefono">Telefono</label>
+        <input asp-for="Telefono" class="form-control"/>
+    </div>
+
+    <div>
+        <label for="Gmail">Gmail</label>
+        <input asp-for="Gmail" class="form-control"/>
+    </div>
+
+    <button type="submit">Actualizar</button>
+
+
+
+
+
+
+</form>
+
+<a asp-action="Index">Cancelar</a>

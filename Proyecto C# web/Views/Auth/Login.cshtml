@@ -1,0 +1,35 @@
+@model insertarDatosApp.Models.LoginViewModel
+
+<link rel="stylesheet" href="/css/Login.css">
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="login-container">
+    
+    <img src="/img/logo.png" style="height: 200px; width: 250px; transform: rotate(10deg); margin-top: -50px;" alt="">
+    <h2>Login</h2>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+
+    <form asp-action="Login" method="post" class="login-form">
+        <div class="form-group">
+            <label asp-for="NombreUsuario">Nombre de Usuario:</label>
+            <input asp-for="NombreUsuario" class="form-control" required />
+            <span asp-validation-for="NombreUsuario" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Contrasena">Contraseña:</label>
+            <input asp-for="Contrasena" type="password" class="form-control" required />
+            <span asp-validation-for="Contrasena" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn-submit">Login</button>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

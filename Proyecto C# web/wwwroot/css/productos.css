@@ -1,0 +1,103 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sección de productos recientes */
+.recent-products {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.recent-products h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Diseño de la cuadrícula */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjetas de producto */
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Etiqueta de nuevo */
+.badge {
+    display: inline-block;
+    background: #ffc107;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* Precio */
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Acciones (botones) */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.actions button {
+    background: #ddd;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.actions button:hover {
+    background: #ccc;
+}
+
+/* Ver más */
+.view-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #4a154b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.view-more:hover {
+    background: #6a2b6f;
+}

@@ -1,0 +1,38 @@
+@model Usuario
+
+<div class="container">
+
+    <h2>Agregar Usuario</h2>
+
+    <form asp-action="Agregar" asp-controller="Auth" method="post">
+
+        <div class="mb-3">
+            <label asp-for="NombreUsuario" class="form-label"required >Nombre de Usuario</label>
+            <input asp-for="NombreUsuario" class="form-control" />
+            <span asp-validation-for="NombreUsuario" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Contrasena" class="form-label">Contraseña</label>
+            <input asp-for="Contrasena" class="form-control" />
+            <span asp-validation-for="Contrasena" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Telefono" class="form-label">Teléfono</label>
+            <input asp-for="Telefono" class="form-control" />
+            <span asp-validation-for="Telefono" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Agregar</button>
+        <a class="btn btn-secondary" href="@Url.Action("Dashboard", "Auth")">Cancelar</a>
+
+    </form>
+    
+</div>

@@ -1,0 +1,50 @@
+  /* Custom sidebar styles */
+  .sidebar {
+    height: 100vh;
+    background-color: #343a40;
+    color: white;
+    position: fixed;
+    top: 0; /* Fija la posición en la parte superior */
+    left: 0;
+    z-index: 1030;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 95px; /* Ajusta este valor para dejar el espacio adecuado si es necesario */
+    padding-bottom: 11px;
+    padding-top: 10px; /* Añade un padding superior si lo necesitas */
+    overflow-y: auto; /* Permite el scroll interno si el contenido es más largo que el viewport */
+    width: 250px; /* Establece un ancho para el sidebar */
+}
+
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+    background-color: #495057;
+}
+
+.sidebar.collapsed {
+    transform: translateX(-100%);
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+        transform: translateX(-100%);
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
