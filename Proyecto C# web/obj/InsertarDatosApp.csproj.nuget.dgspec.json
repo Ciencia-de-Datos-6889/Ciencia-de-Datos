@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\und_6\\Desktop\\Sena Datos\\Proyecto C# web\\InsertarDatosApp.csproj": {}
+    "C:\\Users\\und_6\\Desktop\\Ciencia de Datos Sena\\Proyecto C# web\\InsertarDatosApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\und_6\\Desktop\\Sena Datos\\Proyecto C# web\\InsertarDatosApp.csproj": {
+    "C:\\Users\\und_6\\Desktop\\Ciencia de Datos Sena\\Proyecto C# web\\InsertarDatosApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\und_6\\Desktop\\Sena Datos\\Proyecto C# web\\InsertarDatosApp.csproj",
+        "projectUniqueName": "C:\\Users\\und_6\\Desktop\\Ciencia de Datos Sena\\Proyecto C# web\\InsertarDatosApp.csproj",
         "projectName": "InsertarDatosApp",
-        "projectPath": "C:\\Users\\und_6\\Desktop\\Sena Datos\\Proyecto C# web\\InsertarDatosApp.csproj",
+        "projectPath": "C:\\Users\\und_6\\Desktop\\Ciencia de Datos Sena\\Proyecto C# web\\InsertarDatosApp.csproj",
         "packagesPath": "C:\\Users\\und_6\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\und_6\\Desktop\\Sena Datos\\Proyecto C# web\\obj\\",
+        "outputPath": "C:\\Users\\und_6\\Desktop\\Ciencia de Datos Sena\\Proyecto C# web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
