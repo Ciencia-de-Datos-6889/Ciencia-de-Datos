@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InsertarDatosApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a462b38cc32db7b0b859ee2e86790e15d59e4b3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7c8f0597993745e0be7bd09965f8d83bfc68325")]
 [assembly: System.Reflection.AssemblyProductAttribute("InsertarDatosApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InsertarDatosApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
