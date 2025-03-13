@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+xk0aVo7zu0=",
+  "dgSpecHash": "0r2ruH9pgZc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\und_6\\Desktop\\Sena Datos\\Proyecto C# web\\InsertarDatosApp.csproj",
+  "projectFilePath": "C:\\Users\\und_6\\Desktop\\Ciencia de Datos Sena\\Proyecto C# web\\InsertarDatosApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\und_6\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\und_6\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
