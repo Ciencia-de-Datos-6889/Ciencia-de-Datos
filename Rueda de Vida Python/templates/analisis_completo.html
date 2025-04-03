@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Completo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <h1 class="nav-link px-2 text-white">Análisis Rueda de Vida</h1>
+                <li><a href="{{ url_for('index') }}" class="nav-link px-2 text-secondary">Home</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <h2>Datos de Usuarios</h2>
+        <!-- Tabla de primeras filas -->
+        {{ datos['primeras_filas']|safe }}
+
+        <h2 class="mt-4">Estadísticas</h2>
+        <!-- Tabla de estadísticas -->
+        {{ datos['estadisticas']|safe }}
+
+        <h2 class="mt-4">Gráficos</h2>
+        <div class="row">
+            <!-- Boxplot -->
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename=datos['boxplot']) }}" class="img-fluid">
+            </div>
+            <!-- Histogramas -->
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename=datos['histogramas']) }}" class="img-fluid">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <!-- Matriz de correlación -->
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename=datos['correlacion']) }}" class="img-fluid">
+            </div>
+            <!-- Pairplot -->
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename=datos['pairplot']) }}" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
